@@ -3,11 +3,12 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>胡翔｜證照</title>
+  <title>胡翔｜近距離魔術表演</title>
 
   <style>
   
-    .intro-img{
+    
+  .intro-img{
   width: 100%;
   max-width: 100%;
   height: auto;
@@ -21,8 +22,7 @@
   display: inline-block;
   margin-bottom: 24px;  /* 控制與下面區塊的距離 */
 }
-  
-  
+
     :root{
       --bg:#ffffff;
       --card:#ffffff;
@@ -55,6 +55,7 @@
     }
 
     h1{margin-top:0}
+    h3{margin-bottom:10px}
 
     .btn{
       display:inline-block;
@@ -67,26 +68,20 @@
       font-size:14px;
     }
 
-    /* 證照圖片區 */
-    .cert-grid{
-      display:grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap:16px;
+    /* 影片比例（16:9） */
+    .video{
+      position:relative;
+      width:100%;
+      padding-top:56.25%;
       margin-top:12px;
     }
 
-    @media(max-width:900px){
-      .cert-grid{grid-template-columns:1fr 1fr}
-    }
-    @media(max-width:600px){
-      .cert-grid{grid-template-columns:1fr}
-    }
-
-    .cert-grid img{
+    .video iframe{
+      position:absolute;
+      top:0; left:0;
       width:100%;
+      height:100%;
       border-radius:12px;
-      border:1px solid var(--line);
-      display:block;
     }
 
     footer{
@@ -105,23 +100,51 @@
   <!-- 回首頁 -->
   <a class="btn back-btn" href="index.html">← 回首頁</a>
 
-  <!-- 標題 -->
+  <!-- 介紹 -->
   <div class="card">
-    <h1>專業證照</h1>
-    <p>以下為本人取得之相關專業證照：</p>
+    <h1>python小作品</h1>
+    <p>
+      用影像串流結合人臉辨識製作了一個小作品，展示於下方影片連結。
+    </p>
   </div>
 
-  <!-- 證照圖片 -->
-  <div class="card">
-    <div class="cert-grid">
-      <img src="proof1.jpg" alt="電腦硬體裝修乙級">
-      <img src="proof2.jpg" alt="嵌入式應用證書">
-      <img src="proof3.jpg" alt="嵌入式應用證書">
-    </div>
+<!-- 影片 1 -->
+<div class="card">
+  <h3>影像串流與人臉辨識</h3>
+  <div class="video">
+    <iframe
+      src="https://www.youtube.com/embed/nq5LI9mneF0"
+      title="影像串流與人臉辨識"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen>
+    </iframe>
   </div>
+</div>
+
+
+
+<!-- 影片 2 -->
+<div class="card">
+  <h3>影像串流與人臉辨識</h3>
+  <div class="video">
+    <iframe
+      src="https://www.youtube.com/embed/BLL_oErqsg8"
+      title="影像串流與人臉辨識"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen>
+    </iframe>
+  </div>
+</div>
+
+
+
+
+
 
   <footer>
-    © <span id="y"></span> 胡翔相關證照
+    © <span id="y"></span> 胡翔的python影像串流
   </footer>
 
 </main>

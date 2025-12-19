@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>胡翔｜SMU模組</title>
+
+  <style>
+      .intro-img{
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 16px;
+  object-fit: cover;
+}
+
+
+.back-btn{
+  display: inline-block;
+  margin-bottom: 24px;  /* 控制與下面區塊的距離 */
+}
+  
+  
+  
+    :root{
+      --bg:#ffffff;
+      --card:#ffffff;
+      --text:#1f2937;
+      --muted:#6b7280;
+      --line:#e5e7eb;
+      --accent:#2563eb;
+      --radius:16px;
+      --shadow:0 8px 24px rgba(0,0,0,.06);
+    }
+
+    *{box-sizing:border-box}
+
+    body{
+      margin:0;
+      font-family: system-ui, -apple-system, "Segoe UI", Arial, "Noto Sans TC", sans-serif;
+      background:var(--bg);
+      color:var(--text);
+      line-height:1.65;
+    }
+
+    .wrap{
+      max-width:1000px;
+      margin:0 auto;
+      padding:24px;
+    }
+
+    a{text-decoration:none;color:inherit}
+
+    .btn{
+      display:inline-block;
+      padding:10px 14px;
+      border-radius:12px;
+      border:1px solid var(--line);
+      background:#fff;
+      font-size:14px;
+      cursor:pointer;
+    }
+
+    .card{
+      background:var(--card);
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:24px;
+      margin-bottom:24px;
+    }
+
+    h1{margin-top:0}
+    h3{margin-top:0}
+
+    .muted{color:var(--muted)}
+
+    /* 圖片展示 */
+    .img-box{
+      margin-top:12px;
+    }
+
+    .img-box img{
+      width:100%;
+      border-radius:12px;
+      border:1px solid var(--line);
+      display:block;
+    }
+
+    .img-desc{
+      margin-top:10px;
+      background:#f9fafb;
+      border:1px solid var(--line);
+      border-radius:12px;
+      padding:14px;
+      color:var(--muted);
+      font-size:14px;
+    }
+
+    footer{
+      text-align:center;
+      color:var(--muted);
+      font-size:13px;
+      margin-top:40px;
+    }
+  </style>
+</head>
+
+<body>
+
+<main class="wrap">
+
+  <!-- 回首頁 -->
+  <a class="btn back-btn" href="index.html">← 回首頁</a>
+
+  <!-- 專題標題 -->
+  <div class="card">
+    <h1>高精度電源提供及量測模組開發</h1>
+    <p class="muted">
+      本論文為碩士就讀期間和矽格公司研發團隊共同開發。
+    </p>
+  </div>
+  
+
+  
+
+  <!-- 圖片 1 -->
+  <div class="card">
+    <h3>系統架構圖</h3>
+
+    <div class="img-box">
+      <img src="smu1.jpg" alt="SMU架構圖">
+    </div>
+
+    <div class="img-desc">
+
+
+一、SMU 簡介 <br>
+SMU（Source Measure Unit，電源量測單元）是一種可同時進行「電源輸出（Source）」與
+「電性量測（Measure）」的精密量測設備。其可輸出電壓或電流，並同步量測對應的電流或電壓，
+具備高精度、低雜訊與高穩定度的特性，廣泛應用於半導體元件測試與電性分析。 <br><br><br>
+
+二、SMU 在半導體領域的應用<br>
+
+1. 元件 I–V 特性量測  <br>
+SMU 常用於半導體元件（如 MOSFET、Diode、BJT 等）的 I–V 曲線量測。<br>
+
+2. 漏電流與低功耗量測  <br>
+在先進製程與低功耗 IC 中，待機電流與漏電流常落於 nA 甚至 pA 等級。<br>
+
+3. 半導體可靠度與老化測試  <br>
+SMU 可於長時間測試中提供穩定偏壓，
+並持續監測電流變化，應用於可靠度測試，
+以評估元件於長時間操作下的劣化行為。<br>
+
+4. 晶圓與 IC 測試應用  <br>
+於晶圓探針測試（Wafer Test）或 IC 驗證階段，
+SMU 可透過探針或測試治具直接對晶粒供電並量測電性，
+協助判斷製程良率與電性分布。<br>
+
+
+    </div>
+  </div>
+
+
+  <footer>
+    © <span id="y"></span> 胡翔 · 碩士論文
+  </footer>
+
+</main>
+
+<script>
+  document.getElementById('y').textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>

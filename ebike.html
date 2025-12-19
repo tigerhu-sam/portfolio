@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>胡翔｜電動腳踏車電池模組</title>
+
+  <style>
+      .intro-img{
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 16px;
+  object-fit: cover;
+}
+
+
+.back-btn{
+  display: inline-block;
+  margin-bottom: 24px;  /* 控制與下面區塊的距離 */
+}
+  
+  
+  
+    :root{
+      --bg:#ffffff;
+      --card:#ffffff;
+      --text:#1f2937;
+      --muted:#6b7280;
+      --line:#e5e7eb;
+      --accent:#2563eb;
+      --radius:16px;
+      --shadow:0 8px 24px rgba(0,0,0,.06);
+    }
+
+    *{box-sizing:border-box}
+
+    body{
+      margin:0;
+      font-family: system-ui, -apple-system, "Segoe UI", Arial, "Noto Sans TC", sans-serif;
+      background:var(--bg);
+      color:var(--text);
+      line-height:1.65;
+    }
+
+    .wrap{
+      max-width:1000px;
+      margin:0 auto;
+      padding:24px;
+    }
+
+    a{text-decoration:none;color:inherit}
+
+    .btn{
+      display:inline-block;
+      padding:10px 14px;
+      border-radius:12px;
+      border:1px solid var(--line);
+      background:#fff;
+      font-size:14px;
+      cursor:pointer;
+    }
+
+    .card{
+      background:var(--card);
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:24px;
+      margin-bottom:24px;
+    }
+
+    h1{margin-top:0}
+    h3{margin-top:0}
+
+    .muted{color:var(--muted)}
+
+    /* 圖片展示 */
+    .img-box{
+      margin-top:12px;
+    }
+
+    .img-box img{
+      width:100%;
+      border-radius:12px;
+      border:1px solid var(--line);
+      display:block;
+    }
+
+    .img-desc{
+      margin-top:10px;
+      background:#f9fafb;
+      border:1px solid var(--line);
+      border-radius:12px;
+      padding:14px;
+      color:var(--muted);
+      font-size:14px;
+    }
+
+    footer{
+      text-align:center;
+      color:var(--muted);
+      font-size:13px;
+      margin-top:40px;
+    }
+  </style>
+</head>
+
+<body>
+
+<main class="wrap">
+
+  <!-- 回首頁 -->
+  <a class="btn back-btn" href="index.html">← 回首頁</a>
+
+  <!-- 專題標題 -->
+  <div class="card">
+    <h1>36V及48V電池模組</h1>
+    <p class="muted">
+      此為胡翔於睿騰能源(加百裕工業)擔任工程師時所開發出的產品，應用於電動腳踏車。
+    </p>
+  </div>
+  
+
+  
+  
+  
+
+  <!-- 圖片 1 -->
+  <div class="card">
+    <h3>低串數電池模組架構圖</h3>
+
+    <div class="img-box">
+      <img src="ebike3.jpg" alt="電池模組">
+    </div>
+
+
+  </div>
+
+  <!-- 圖片 2 -->
+  <div class="card">
+    <h3>增程型電池</h3>
+
+    <div class="img-box">
+      <img src="ebike4.jpg" alt="水壺造型電池">
+    </div>
+
+    <div class="img-desc">
+第一款導入Type-C充電的增程型電池，因應歐盟法規，Type-C為廣泛之通用接口，
+此增程電池，可對移動式裝置進行充電，也可以從接口對電池組進行充電，節省不必要的端口設計浪費，
+2in1的設計，可配合主電池達雙電池放電使用，提升總體容量(瓦時數)，提升電動腳踏車之總里程數。<br><br>
+因為有些車子走輕量化設計，所以車管的尺寸只可放得下兩並的電池，
+會造成電池的總容量較小無法行駛較高的里程，為了改善這樣的窘境，
+腦筋一動，想到了水壺架上的水壺，若是可以做一顆水壺造型的水壺電池放在置於水壺架上，
+且這顆電池是可拆卸式的，除了可以對主電池充電，也可一直接著主電池同時充電與放電，
+更可以將其卸下對行動裝置充電，這樣的設計就太完美了，
+於是我和機構工程師、軟韌體工程師便開始埋頭苦幹，
+一頭熱地栽入了這款電池的設計開發，最後用了半年的時間設計出了這款可支援Type-C充放電應用，
+可支持主電池達到續航力提升之水壺造型電池，
+並參加2022年電動自行車展，還被項目經理及業務經理帶出國去參加比利時車展，替公司爭取新訂單。
+
+
+    </div>
+  </div>
+
+
+
+  <footer>
+    © <span id="y"></span> 胡翔 · 自走車專題
+  </footer>
+
+</main>
+
+<script>
+  document.getElementById('y').textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>

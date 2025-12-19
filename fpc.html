@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>胡翔｜電動腳踏車電池模組</title>
+
+  <style>
+      .intro-img{
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 16px;
+  object-fit: cover;
+}
+
+
+.back-btn{
+  display: inline-block;
+  margin-bottom: 24px;  /* 控制與下面區塊的距離 */
+}
+  
+  
+  
+    :root{
+      --bg:#ffffff;
+      --card:#ffffff;
+      --text:#1f2937;
+      --muted:#6b7280;
+      --line:#e5e7eb;
+      --accent:#2563eb;
+      --radius:16px;
+      --shadow:0 8px 24px rgba(0,0,0,.06);
+    }
+
+    *{box-sizing:border-box}
+
+    body{
+      margin:0;
+      font-family: system-ui, -apple-system, "Segoe UI", Arial, "Noto Sans TC", sans-serif;
+      background:var(--bg);
+      color:var(--text);
+      line-height:1.65;
+    }
+
+    .wrap{
+      max-width:1000px;
+      margin:0 auto;
+      padding:24px;
+    }
+
+    a{text-decoration:none;color:inherit}
+
+    .btn{
+      display:inline-block;
+      padding:10px 14px;
+      border-radius:12px;
+      border:1px solid var(--line);
+      background:#fff;
+      font-size:14px;
+      cursor:pointer;
+    }
+
+    .card{
+      background:var(--card);
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:24px;
+      margin-bottom:24px;
+    }
+
+    h1{margin-top:0}
+    h3{margin-top:0}
+
+    .muted{color:var(--muted)}
+
+    /* 圖片展示 */
+    .img-box{
+      margin-top:12px;
+    }
+
+    .img-box img{
+      width:100%;
+      border-radius:12px;
+      border:1px solid var(--line);
+      display:block;
+    }
+
+    .img-desc{
+      margin-top:10px;
+      background:#f9fafb;
+      border:1px solid var(--line);
+      border-radius:12px;
+      padding:14px;
+      color:var(--muted);
+      font-size:14px;
+    }
+
+    footer{
+      text-align:center;
+      color:var(--muted);
+      font-size:13px;
+      margin-top:40px;
+    }
+  </style>
+</head>
+
+<body>
+
+<main class="wrap">
+
+  <!-- 回首頁 -->
+  <a class="btn back-btn" href="index.html">← 回首頁</a>
+
+  <!-- 專題標題 -->
+  <div class="card">
+    <h1>48V軟性電路板電池模組</h1>
+    <p class="muted">
+      此為胡翔於睿騰能源(加百裕工業)擔任工程師時所開發出的產品，應用於電動腳踏車。
+    </p>
+  </div>
+  
+
+  
+  
+  
+
+  <!-- 圖片 1 -->
+  <div class="card">
+    <h3>低串數電池模組架構圖</h3>
+
+    <div class="img-box">
+      <img src="ebike3.jpg" alt="電池模組">
+    </div>
+
+
+  </div>
+
+  <!-- 圖片 2 -->
+  <div class="card">
+    <h3>軟性電路板電池模組</h3>
+
+    <div class="img-box">
+      <img src="fpc2.jpg" alt="FPC應用">
+    </div>
+
+    <div class="img-desc">
+第一款13串(48V系統)腳踏車電池以軟性電路板(FPC)取代傳統串壓線的設計，
+大幅降低組裝過程中，作業員壓破導線，以及終端客戶長時間騎乘後，
+造成的導線壓破漏電甚至斷電之風險，是一款大幅提升騎乘者之安全度設計。
+
+
+    </div>
+  </div>
+
+
+
+  <footer>
+    © <span id="y"></span> 胡翔 · 自走車專題
+  </footer>
+
+</main>
+
+<script>
+  document.getElementById('y').textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>

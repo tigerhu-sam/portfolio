@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>胡翔｜自走車循線系統</title>
+
+  <style>
+      .intro-img{
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 16px;
+  object-fit: cover;
+}
+
+
+.back-btn{
+  display: inline-block;
+  margin-bottom: 24px;  /* 控制與下面區塊的距離 */
+}
+  
+  
+  
+    :root{
+      --bg:#ffffff;
+      --card:#ffffff;
+      --text:#1f2937;
+      --muted:#6b7280;
+      --line:#e5e7eb;
+      --accent:#2563eb;
+      --radius:16px;
+      --shadow:0 8px 24px rgba(0,0,0,.06);
+    }
+
+    *{box-sizing:border-box}
+
+    body{
+      margin:0;
+      font-family: system-ui, -apple-system, "Segoe UI", Arial, "Noto Sans TC", sans-serif;
+      background:var(--bg);
+      color:var(--text);
+      line-height:1.65;
+    }
+
+    .wrap{
+      max-width:1000px;
+      margin:0 auto;
+      padding:24px;
+    }
+
+    a{text-decoration:none;color:inherit}
+
+    .btn{
+      display:inline-block;
+      padding:10px 14px;
+      border-radius:12px;
+      border:1px solid var(--line);
+      background:#fff;
+      font-size:14px;
+      cursor:pointer;
+    }
+
+    .card{
+      background:var(--card);
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:24px;
+      margin-bottom:24px;
+    }
+
+    h1{margin-top:0}
+    h3{margin-top:0}
+
+    .muted{color:var(--muted)}
+
+    /* 圖片展示 */
+    .img-box{
+      margin-top:12px;
+    }
+
+    .img-box img{
+      width:100%;
+      border-radius:12px;
+      border:1px solid var(--line);
+      display:block;
+    }
+
+    .img-desc{
+      margin-top:10px;
+      background:#f9fafb;
+      border:1px solid var(--line);
+      border-radius:12px;
+      padding:14px;
+      color:var(--muted);
+      font-size:14px;
+    }
+
+    footer{
+      text-align:center;
+      color:var(--muted);
+      font-size:13px;
+      margin-top:40px;
+    }
+  </style>
+</head>
+
+<body>
+
+<main class="wrap">
+
+  <!-- 回首頁 -->
+  <a class="btn back-btn" href="index.html">← 回首頁</a>
+
+  <!-- 專題標題 -->
+  <div class="card">
+    <h1>自走車循線系統</h1>
+    <p class="muted">
+      本專題為大學時期完成之自走車循線系統，  
+      透過影像感測與控制邏輯，使自走車能穩定沿著軌道行進並完成轉向。
+    </p>
+  </div>
+  
+<!-- 影片 1 -->
+<div class="card">
+  <h3>循跡自走車</h3>
+  <div class="video">
+    <iframe
+      src="https://www.youtube.com/embed/kNxfHphO6IY"
+      title="循跡自走車"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen>
+    </iframe>
+  </div>
+</div>
+
+  
+  
+  
+
+  <!-- 圖片 1 -->
+  <div class="card">
+    <h3>系統架構圖I</h3>
+
+    <div class="img-box">
+      <img src="car1.jpg" alt="自走車架構圖">
+    </div>
+
+    <div class="img-desc">
+      電池上電後，進到主程式中，初始化TFC相關之ADC、UART、PWM...等周邊，
+	  偵測開關是否開至case3，進入後先使鏡頭做初始化校正，判斷黑線及白底，
+	  接收外部中斷給予的LineScanImageReady及CarkitReady是否皆為1。
+    </div>
+  </div>
+
+  <!-- 圖片 2 -->
+  <div class="card">
+    <h3>系統架構圖II</h3>
+
+    <div class="img-box">
+      <img src="car2.jpg" alt="自走車架構圖">
+    </div>
+
+    <div class="img-desc">
+      系統以 Freescale KL25Z 作為主控制器，
+      負責影像資料判斷、轉向邏輯計算，以及伺服馬達與直流馬達控制。
+	  校正完畢後，啟動直流馬達LineScanImageReady及CarkitReady是否皆為1，
+	  皆為1則進入Judgement()，進行車子與鏡頭的角度補償和加速/減速修正。
+    </div>
+  </div>
+
+  <!-- 圖片 3 -->
+  <div class="card">
+    <h3>系統架構圖III</h3>
+
+    <div class="img-box">
+      <img src="car3.jpg" alt="自走車架構">
+    </div>
+
+    <div class="img-desc">
+      透過影像辨識取得軌道位置，
+	  進行左補償或是右補償的車身位置調整，
+	  每更新完後會將LineScanImageReady清0，
+	  待重新接收到新的128筆線資料，再將其設為1，
+      系統即時計算偏移量並調整前輪轉向角度；
+      當偵測到彎道時，會同步降低後輪馬達輸出以提升穩定性。
+    </div>
+  </div>
+
+  <footer>
+    © <span id="y"></span> 胡翔 · 自走車專題
+  </footer>
+
+</main>
+
+<script>
+  document.getElementById('y').textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
