@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>胡翔｜證照</title>
+
+  <style>
+  
+    .intro-img{
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 16px;
+  object-fit: cover;
+}
+
+
+.back-btn{
+  display: inline-block;
+  margin-bottom: 24px;  /* 控制與下面區塊的距離 */
+}
+  
+  
+    :root{
+      --bg:#ffffff;
+      --card:#ffffff;
+      --text:#1f2937;
+      --muted:#6b7280;
+      --line:#e5e7eb;
+      --accent:#2563eb;
+      --radius:16px;
+      --shadow:0 8px 24px rgba(0,0,0,.06);
+    }
+
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: system-ui, -apple-system, "Segoe UI", Arial, "Noto Sans TC", sans-serif;
+      background:var(--bg);
+      color:var(--text);
+      line-height:1.65;
+    }
+
+    .wrap{max-width:1000px;margin:0 auto;padding:24px}
+
+    .card{
+      background:var(--card);
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:24px;
+      margin-bottom:24px;
+    }
+
+    h1{margin-top:0}
+
+    .btn{
+      display:inline-block;
+      padding:10px 14px;
+      border-radius:12px;
+      border:1px solid var(--line);
+      background:#fff;
+      color:var(--text);
+      text-decoration:none;
+      font-size:14px;
+    }
+
+    /* 證照圖片區 */
+    .cert-grid{
+      display:grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap:16px;
+      margin-top:12px;
+    }
+
+    @media(max-width:900px){
+      .cert-grid{grid-template-columns:1fr 1fr}
+    }
+    @media(max-width:600px){
+      .cert-grid{grid-template-columns:1fr}
+    }
+
+    .cert-grid img{
+      width:100%;
+      border-radius:12px;
+      border:1px solid var(--line);
+      display:block;
+    }
+
+    footer{
+      text-align:center;
+      color:var(--muted);
+      font-size:13px;
+      margin-top:40px;
+    }
+  </style>
+</head>
+
+<body>
+
+<main class="wrap">
+
+  <!-- 回首頁 -->
+  <a class="btn back-btn" href="index.html">← 回首頁</a>
+
+  <!-- 標題 -->
+  <div class="card">
+    <h1>專業證照</h1>
+    <p>以下為本人取得之相關專業證照：</p>
+  </div>
+
+  <!-- 證照圖片 -->
+  <div class="card">
+    <div class="cert-grid">
+      <img src="proof1.jpg" alt="電腦硬體裝修乙級">
+      <img src="proof2.jpg" alt="嵌入式應用證書">
+      <img src="proof3.jpg" alt="嵌入式應用證書">
+    </div>
+  </div>
+
+  <footer>
+    © <span id="y"></span> 胡翔
+  </footer>
+
+</main>
+
+<script>
+  document.getElementById('y').textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>胡翔｜證照與技能</title>
+
+  <style>
+  
+  .intro-img{
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 16px;
+  object-fit: cover;
+}
+
+
+.back-btn{
+  display: inline-block;
+  margin-bottom: 24px;  /* 控制與下面區塊的距離 */
+}
+
+
+  
+  
+    :root{
+      --bg:#ffffff;
+      --card:#ffffff;
+      --text:#1f2937;
+      --muted:#6b7280;
+      --line:#e5e7eb;
+      --accent:#2563eb;
+      --radius:16px;
+      --shadow:0 8px 24px rgba(0,0,0,.06);
+    }
+
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: system-ui, -apple-system, "Segoe UI", Arial, "Noto Sans TC", sans-serif;
+      background:var(--bg);
+      color:var(--text);
+      line-height:1.65;
+    }
+
+    .wrap{max-width:900px;margin:0 auto;padding:24px}
+
+    .card{
+      background:var(--card);
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:24px;
+      margin-bottom:20px;
+    }
+
+    h1{margin-top:0}
+    h2{margin-bottom:10px}
+
+    .btn{
+      display:inline-block;
+      padding:10px 14px;
+      border-radius:12px;
+      border:1px solid var(--line);
+      background:#fff;
+      color:var(--text);
+      text-decoration:none;
+      font-size:14px;
+    }
+
+    .btn.primary{
+      background:var(--accent);
+      color:#fff;
+      border-color:var(--accent);
+    }
+
+    .row{display:flex;gap:10px;flex-wrap:wrap;margin-top:10px}
+    .pill{
+      background:#f3f4f6;
+      padding:6px 10px;
+      border-radius:999px;
+      font-size:12px;
+      color:var(--muted);
+    }
+
+    footer{
+      text-align:center;
+      color:var(--muted);
+      font-size:13px;
+      margin-top:40px;
+    }
+  </style>
+</head>
+
+<body>
+
+<main class="wrap">
+
+  <!-- 回上一頁 -->
+ <!-- <a class="btn" href="index.html">← 回首頁</a>  -->
+  <a class="btn back-btn" href="index.html">← 回首頁</a>
+
+
+
+<!-- 自我介紹（圖片） -->
+<div class="card">
+  <img
+    src="profile1.jpg"
+    alt="胡翔 自我介紹照片"
+    class="intro-img"
+  >
+</div>
+
+<!-- 證照（圖片） -->
+<div class="card">
+  <img
+    src="profile2.jpg"
+    alt="胡翔 證照照片"
+    class="intro-img"
+  >
+</div>
+
+<!-- 工作（圖片） -->
+<div class="card">
+  <img
+    src="profile3.jpg"
+    alt="胡翔 工作簡介"
+    class="intro-img"
+  >
+</div>
+
+
+
+
+
+
+  <footer>
+    © <span id="y"></span> 胡翔
+  </footer>
+
+</main>
+
+<script>
+  document.getElementById('y').textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>

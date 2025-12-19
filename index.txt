@@ -1,0 +1,270 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>胡翔｜作品集</title>
+  <meta name="description" content="胡翔的個人作品集：硬體、嵌入式、Python、自動化專案" />
+
+  <style>
+    :root{
+      --bg:#ffffff;
+      --card:#ffffff;
+      --text:#1f2937;
+      --muted:#6b7280;
+      --line:#e5e7eb;
+      --accent:#2563eb;
+      --accent-soft:#eff6ff;
+      --radius:16px;
+      --shadow: 0 8px 24px rgba(0,0,0,.06);
+    }
+
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: system-ui, -apple-system, "Segoe UI", Arial, "Noto Sans TC", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height:1.65;
+    }
+    a{color:var(--accent);text-decoration:none}
+    a:hover{text-decoration:underline}
+
+    .wrap{max-width:1100px;margin:0 auto;padding:24px}
+
+    /* NAV */
+    .nav{
+      position:sticky;top:0;z-index:10;
+      background:#ffffffcc;
+      backdrop-filter: blur(8px);
+      border-bottom:1px solid var(--line);
+    }
+    .nav .wrap{
+      display:flex;align-items:center;justify-content:space-between;
+      padding:14px 24px;
+    }
+    .brand{
+      display:flex;align-items:center;gap:10px;
+      font-weight:700;color:var(--text);
+    }
+    .dot{
+      width:10px;height:10px;border-radius:50%;
+      background:var(--accent);
+    }
+    .links{display:flex;gap:16px;flex-wrap:wrap}
+    .links a{
+      color:var(--muted);
+      font-size:14px;
+    }
+
+    /* HERO */
+    .hero{padding:36px 0}
+    .hero-grid{
+      display:grid;gap:20px;
+      grid-template-columns:1.3fr .7fr;
+    }
+    @media(max-width:900px){
+      .hero-grid{grid-template-columns:1fr}
+    }
+
+    .card{
+      background:var(--card);
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:24px;
+    }
+
+    .kicker{
+      display:inline-block;
+      background:var(--accent-soft);
+      color:var(--accent);
+      padding:6px 12px;
+      border-radius:999px;
+      font-size:13px;
+      margin-bottom:10px;
+    }
+
+    h1{
+      font-size:40px;
+      margin:10px 0;
+      line-height:1.2;
+    }
+    @media(max-width:520px){h1{font-size:32px}}
+
+    .sub{color:var(--muted)}
+
+    .cta{margin-top:18px;display:flex;gap:12px;flex-wrap:wrap}
+    .btn{
+      border:1px solid var(--line);
+      padding:10px 14px;
+      border-radius:12px;
+      background:#fff;
+      color:var(--text);
+      font-size:14px;
+    }
+    .btn.primary{
+      background:var(--accent);
+      color:#fff;
+      border-color:var(--accent);
+    }
+    .btn:hover{opacity:.9}
+
+    /* TAGS */
+    .tagrow{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+    .tag{
+      background:#f9fafb;
+      border:1px solid var(--line);
+      padding:6px 10px;
+      border-radius:999px;
+      font-size:12px;
+      color:var(--muted);
+    }
+
+    section{padding:24px 0}
+    h2{margin:0 0 8px}
+    .hint{color:var(--muted);font-size:13px}
+
+    /* GRID */
+    .grid{
+      display:grid;gap:16px;
+      grid-template-columns:repeat(3,1fr);
+    }
+    @media(max-width:900px){.grid{grid-template-columns:1fr 1fr}}
+    @media(max-width:600px){.grid{grid-template-columns:1fr}}
+
+    .proj h3{margin:0 0 6px;font-size:18px}
+    .proj p{color:var(--muted);margin:0}
+
+    .pill{
+      background:#f3f4f6;
+      border-radius:999px;
+      padding:6px 10px;
+      font-size:12px;
+      color:var(--muted);
+    }
+
+    .row{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
+    .links2{margin-top:12px;display:flex;gap:10px;flex-wrap:wrap}
+    .links2 a{
+      font-size:13px;
+      padding:8px 10px;
+      border:1px solid var(--line);
+      border-radius:10px;
+      color:var(--text);
+    }
+
+    .two{display:grid;gap:16px;grid-template-columns:1fr 1fr}
+    @media(max-width:900px){.two{grid-template-columns:1fr}}
+
+    ul{margin:8px 0 0;padding-left:18px;color:var(--muted)}
+    li{margin:6px 0}
+
+    footer{
+      border-top:1px solid var(--line);
+      padding:24px 0;
+      color:var(--muted);
+      font-size:13px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="nav">
+    <div class="wrap">
+      <div class="brand"><span class="dot"></span>胡翔｜作品集</div>
+      <div class="links">
+        <a href="#projects">專案</a>
+        <a href="#skills">技能</a>
+        <a href="#experience">經歷</a>
+        <a href="#contact">聯絡</a>
+      </div>
+    </div>
+  </div>
+
+  <main class="wrap">
+    <div class="hero">
+      <div class="hero-grid">
+        <div class="card">
+          <div class="kicker">硬體 / 嵌入式 / Python</div>
+          <h1>你好，我是胡翔</h1>
+          <p class="sub">
+            硬體研發工程背景，熟悉嵌入式系統與 Python 自動化。
+            喜歡把工程問題整理成清楚、可重複的解決方案。
+          </p>
+
+          <div class="cta">
+            <a class="btn primary" href="#projects">看我的專案</a>
+            <a class="btn" href="#contact">聯絡我</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>快速資訊</h3>
+          <div class="tagrow">
+            <span class="tag">Taiwan</span>
+            <span class="tag">Hardware R&D</span>
+            <span class="tag">Python</span>
+            <span class="tag">Embedded</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section id="projects">
+      <h2>專案</h2>
+      <p class="hint">放你最有代表性的作品即可</p>
+
+      <div class="grid">
+        <div class="card proj">
+          <h3>iPhone 網頁計算機</h3>
+          <p>使用 HTML/JavaScript 製作的計算機，部署於 GitHub Pages。</p>
+          <div class="row">
+            <span class="pill">HTML</span>
+            <span class="pill">JavaScript</span>
+            <span class="pill">PWA</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills">
+      <h2>技能</h2>
+      <div class="two">
+        <div class="card">
+          <h3>硬體 / 嵌入式</h3>
+          <ul>
+            <li>UART / I2C / SPI / GPIO</li>
+            <li>原理圖與 PCB 基礎設計</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>軟體 / Python</h3>
+          <ul>
+            <li>Python 自動化腳本</li>
+            <li>GitHub Pages / Web UI</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>聯絡方式</h2>
+      <div class="card">
+        <ul>
+          <li>Email：yourname@example.com</li>
+          <li>GitHub：https://github.com/tigerhu-sam</li>
+        </ul>
+      </div>
+    </section>
+
+    <footer>
+      © <span id="y"></span> 胡翔 · Hosted on GitHub Pages
+    </footer>
+  </main>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

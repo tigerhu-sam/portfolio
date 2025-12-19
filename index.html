@@ -1,0 +1,427 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>胡翔｜學經歷</title>
+  <meta name="description" content="胡翔的個人作品集：硬體、嵌入式、Python、魔術" />
+
+  <style>
+  
+  .card-link{
+  color: var(--text);
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform .15s ease, box-shadow .15s ease;
+}
+
+.card-link:hover{
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(0,0,0,.08);
+}
+
+
+
+    :root{
+      --bg:#ffffff;
+      --card:#ffffff;
+      --text:#1f2937;
+      --muted:#6b7280;
+      --line:#e5e7eb;
+      --accent:#2563eb;
+      --accent-soft:#eff6ff;
+      --radius:16px;
+      --shadow: 0 8px 24px rgba(0,0,0,.06);
+    }
+
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: system-ui, -apple-system, "Segoe UI", Arial, "Noto Sans TC", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height:1.65;
+    }
+
+    .wrap{max-width:1100px;margin:0 auto;padding:24px}
+
+    a{color:var(--accent);text-decoration:none}
+    a:hover{text-decoration:underline}
+
+    /* NAV */
+    .nav{
+      position:sticky;top:0;z-index:10;
+      background:#ffffffcc;
+      backdrop-filter: blur(8px);
+      border-bottom:1px solid var(--line);
+    }
+    .nav .wrap{
+      display:flex;justify-content:space-between;align-items:center;
+    }
+    .brand{font-weight:700}
+    .links a{margin-left:16px;color:var(--muted);font-size:14px}
+
+.hero-grid{
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  gap:20px;
+}
+
+@media (max-width:900px){
+  .hero-grid{
+    grid-template-columns: 1fr;
+  }
+}
+
+
+    .card{
+      background:var(--card);
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:24px;
+    }
+
+    .kicker{
+      display:inline-block;
+      background:var(--accent-soft);
+      color:var(--accent);
+      padding:6px 12px;
+      border-radius:999px;
+      font-size:13px;
+      margin-bottom:10px;
+    }
+
+    h1{font-size:40px;margin:10px 0}
+    .sub{color:var(--muted)}
+
+    .cta{margin-top:18px}
+    .btn{
+      display:inline-block;
+      padding:10px 14px;
+      border-radius:12px;
+      border:1px solid var(--line);
+      margin-right:8px;
+      font-size:14px;
+      background:#fff;
+      color:var(--text);
+    }
+    .btn.primary{
+      background:var(--accent);
+      color:#fff;
+      border-color:var(--accent);
+    }
+
+    section{padding:32px 0}
+    h2{margin-bottom:6px}
+    .hint{color:var(--muted);font-size:13px}
+
+    /* GRID */
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:16px;
+      margin-top:12px;
+    }
+    @media(max-width:900px){.grid{grid-template-columns:1fr 1fr}}
+    @media(max-width:600px){.grid{grid-template-columns:1fr}}
+
+    .proj p{color:var(--muted)}
+
+    .row{margin-top:10px}
+    .pill{
+      display:inline-block;
+      background:#f3f4f6;
+      padding:6px 10px;
+      border-radius:999px;
+      font-size:12px;
+      margin-right:6px;
+      color:var(--muted);
+    }
+
+    /* VIDEO */
+    .video{
+      margin-top:12px;
+      position:relative;
+      padding-top:56.25%;
+    }
+    .video iframe{
+      position:absolute;top:0;left:0;
+      width:100%;height:100%;
+      border-radius:12px;
+    }
+
+    /* GALLERY */
+    .gallery{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(160px,1fr));
+      gap:12px;
+      margin-top:12px;
+    }
+    .gallery img{
+      width:100%;
+      border-radius:12px;
+      border:1px solid var(--line);
+    }
+
+    footer{
+      border-top:1px solid var(--line);
+      padding:24px 0;
+      color:var(--muted);
+      font-size:13px;
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="nav">
+  <div class="wrap">
+    <div class="brand">胡翔｜學經歷</div>
+    <div class="links">
+      <a href="#projects">作品</a>
+      <a href="#skills">證照技能</a>
+      <a href="#contact">聯絡</a>
+    </div>
+  </div>
+</div>
+
+<main class="wrap">
+
+  <!-- HERO -->
+<div class="hero">
+  <div class="hero-grid">
+    <!-- 左欄：自我介紹 -->
+    <div class="card">
+      <div class="kicker">電路設計 / 嵌入式 / Python</div>
+      <h1>你好，我是胡翔</h1>
+      <p class="sub">
+        電路研發工程背景，電子工程所畢業。<br>
+        曾任職於 SGS 電量實驗室、睿騰能源電力電子技術開發部工程師、亞洲光學專案技術研發中心工程師。<br>
+        大學時期為新竹縣市多所國中/國小魔術社團指導老師。<br>
+      </p>
+      <div class="cta">
+        <a class="btn primary" href="#projects">看我的作品集</a>
+        <a class="btn" href="#contact">聯絡我</a>
+      </div>
+    </div>
+
+    <!-- 右欄：快速資訊（補上就不會空一大塊） -->
+    <div class="card">
+      <h3 style="margin-top:0;">快速資訊</h3>
+      <div class="tagrow">
+        <span class="tag">Hardware R&amp;D</span>
+        <span class="tag">/Power Design</span>
+        <span class="tag">/BMS</span>
+        <span class="tag">/Python</span>
+      </div>
+
+      <div style="margin-top:14px; color: var(--muted); font-size:14px;">
+        <div>📍 Taiwan</div>
+        <div>🔧 電池 / 嵌入式</div>
+        <div>🎓 電子工程所</div>
+      </div>
+
+      <div style="margin-top:14px;">
+      <!--  <a class="btn" href="#skills">看證照技能</a>  -->
+		<a class="btn" href="skills.html">關於胡翔</a>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- PROJECTS -->
+  <section id="projects">
+    <h2>專案及作品</h2>
+	  <!-- 第一排 -->
+	  <!-- 自走車 -->
+ <div class="grid">
+    
+  
+      <div class="card proj">
+        <h3>自走車循線系統</h3>
+        <p>使用感測器與控制邏輯完成循線與轉向的自走車系統，
+		控制前輪為伺服馬達，藉由影像所偵測到的數值去控制左轉或右轉或是繼續直行
+        控制後輪為直流馬達，持續不斷供電，使車子得以持續前進，遇到轉彎時，藉由程式碼控制供應電流，將電流降低，使車子後輪得到較少動力，故車速降低。</p>
+        <div class="video">
+          <iframe src="https://www.youtube.com/embed/SKrVVPw2CIg" allowfullscreen></iframe>
+        </div>
+        <div class="row">
+          <span class="pill">自走車</span>
+          <span class="pill">Freescale</span>
+          <span class="pill">KL25Z</span>
+        </div>
+      </div>
+	
+
+
+  <!-- SMU論文 -->
+
+   <!-- <p class="hint">高精度電源提供及量測模組</p>     -->
+      <div class="card proj">
+        <h3>SMU 量測模組</h3>
+        <p>本研究基於電源供應及量測模組(Source Measure Unit, SMU)
+		架構做更進一步的改良，過去在感測回讀的部分，因放大倍率不足，故無法量測到更精準的結果值，
+		經過改良後使得架構可以有更精準的量測數值。</p>
+        <div class="gallery">
+          <img src="master1.jpg" alt="SMU量測模組電路板" loading="lazy">
+        </div>
+		<div class="row">
+          <span class="pill">SMU</span>
+          <span class="pill">NI</span>
+          <span class="pill">ADC</span>
+        </div>
+      </div>
+    
+	 <!-- 亞光 -->
+
+   <!-- <p class="hint">高精度電源提供及量測模組</p>     -->
+      <div class="card proj">
+        <h3>光達模組開發</h3>
+        <p>2D及3D光達模組開發，透過無線供電及光傳輸，使之於旋轉時，下位機仍可持續對上位機供電，
+		且上位機接收到的測距資料。</p>
+        <div class="gallery">
+          <img src="lidar1.jpg" alt="測距模組" loading="lazy">
+        </div>
+		<div class="row">
+          <span class="pill">掃地機器人</span>
+          <span class="pill">光達</span>
+          <span class="pill">LiDAR</span>
+        </div>
+      </div>
+	
+	
+	
+	
+	
+	</div>
+	
+		  <!-- 第二排 -->
+		  <!-- 摩托車電池 -->
+ <div class="grid">
+    
+  
+      <div class="card proj">
+        <h3>電動摩托車電池模組開發</h3>
+        <p>此為摩托車應用之24串15並(24s15p)，
+		96伏特固定式電池組，採以隔離型Daisy chain設計。</p>
+        <div class="gallery">
+          <img src="emotor1.jpg" alt="摩托車電池" loading="lazy">
+        </div>
+        <div class="row">
+          <span class="pill">PACK</span>
+          <span class="pill">電池模組</span>
+          <span class="pill">e-Motor</span>
+        </div>
+      </div>
+	  
+	        <div class="card proj">
+        <h3>電動腳踏車電池模組開發</h3>
+        <p>第一款13串(48V系統)腳踏車電池以軟性電路板(FPC)取代傳統串壓線的設計，
+		以及第一款導入Type-C充電的增程型電池，可配合主電池達雙電池放電使用，提升電動腳踏車之總里程數。</p>
+        <div class="gallery">
+          <img src="ebike1.jpg" alt="腳踏車電池" loading="lazy">
+        </div>
+        <div class="row">
+          <span class="pill">PACK</span>
+          <span class="pill">電池模組</span>
+          <span class="pill">e-Bike</span>
+        </div>
+      </div>
+	  
+	  
+	  
+	  
+	</div>
+	
+	
+	
+	
+	
+	
+	
+
+  </section>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+  <!-- SKILLS -->
+  <section id="skills">
+    <h2>技能及檢定</h2>
+   <div class="grid">
+      <div class="card">電路設計 / OrCAD / AltiumDesigner</div>
+      <div class="card">Python / HTML / C語言</div>
+
+      <a href="certificates.html" class="card card-link">電腦硬體裝修乙級 / 嵌入式應用證書</a>
+
+	  
+	  <a href="magic.html" class="card card-link">魔術 / 近距離表演</a>
+
+	  
+	  
+	  </div>
+	  
+
+
+
+
+
+
+
+
+
+  <!--  </div> -->
+   </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <h2>聯絡方式</h2>
+    <div class="card">
+      <p>Email：hudog0215@gmail.com</p>
+      <p>Phone：+886 987936561</p>
+    </div>
+  </section>
+
+  <footer>
+    © <span id="y"></span> 胡翔 · Hosted on GitHub Pages
+  </footer>
+
+</main>
+
+<script>
+  document.getElementById('y').textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
